@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <p id="justMethod"></p>
+    <input id="myField" type="text">
+    <button id="updateButton">update</button>
+    <button onclick="justFunction()">just function</button>
+    <button id="shortcutAddEventListener">add event listener</button>
+
+
+
+
+    <script>
+        function justFunction(){
+            const p= document.getElementById("justMethod");
+            // console.log(p)
+            p.innerText = "this is just function";
+
+        }
+
+        document.getElementById("shortcutAddEventListener").addEventListener("click",function(){
+            p = document.getElementById("justMethod");
+            p.innerText = "add event listener button is clicked";
+        })
+
+        document.getElementById("updateButton").addEventListener("click",function (){
+            
+            const textField =  document.getElementById("myField");
+            // console.log(textField.value);
+            p = document.getElementById("justMethod");
+            // console.log(p);
+            p.innerText = textField.value;
+            console.log(p)
+            textField.value = "";
+        })
+    </script>
+</body>
+</html>

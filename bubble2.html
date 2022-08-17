@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="container">
+        <h2>bubble program</h2>
+
+        <ul id="ul-list">
+            <li>list-1</li>
+            <li>list-2</li>
+            <li id="list-3">list-3</li>
+            <li>list-4</li>
+            <li>list-5</li>
+            <li>list-6</li>
+        </ul>
+    </section>
+
+    <script>
+        document.getElementById("list-3").addEventListener("click", function(event){
+            console.log("list 2 is clicked");
+            console.log(event);
+            event.stopPropagation()
+        })
+        document.getElementById("ul-list").addEventListener("click", function(){
+            console.log("ul section clicked")
+        })
+        document.getElementById("container").addEventListener("click", function(){
+            console.log("container area is clicked")
+        })
+    </script>
+</body>
+</html>

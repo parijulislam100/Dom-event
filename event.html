@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <body onclick="myFunction(event)">
+
+        <p>Click on any elements in this document to find out which element triggered the onclick event.</p>
+        
+        <h1>This is a heading</h1>
+        
+        <button>This is a button</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+        function myFunction(event) { 
+          var x = event.target;
+          document.getElementById("demo").innerHTML = "Triggered by a " + x.tagName + " element";
+        console.log(x)
+        }
+        </script>
+</html>

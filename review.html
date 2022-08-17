@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>review</title>
+</head>
+<body>
+    <!-- click handler  -->
+    <input type="text" id="text-field">
+    <br><button id="click-btn">click</button> <br> <br>
+
+    <!-- how to delete text by delete button  -->
+    <h5 id="myText">i eat rice</h5>
+    <input type="text" id="input-field"> 
+    <button id="delete-btn" disabled >Delete</button>
+
+    <script>
+        // document.getElementById("click-btn").addEventListener("click",function (){
+        //     var box = document.getElementById("text-field");
+        //     console.log(box.value);
+        //     box.value = "";
+        // })
+
+        // click handler js code 
+        const clickButton = document.getElementById("click-btn");
+        clickButton.addEventListener("click", function (){
+            const boxText = document.getElementById("text-field");
+            console.log(boxText.value);
+            boxText.value = "";
+
+        });
+
+        // how to delete text by delete button>
+        document.getElementById("delete-btn").addEventListener("click" , function (){
+            document.getElementById("myText").style.display = "none"
+        })
+       document.getElementById("input-field").addEventListener("keyup",function (event){
+            if(event.target.value == "delete"){
+                document.getElementById("delete-btn").removeAttribute("disabled")
+            }
+            else{
+                document.getElementById("delete-btn").setAttribute("disabled",true);
+            }
+       })
+       document.getElementById("input-field").addEventListener("focus",function(){
+            document.body.style.backgroundColor = "orange"
+       });
+       document.getElementById("input-field").addEventListener("blur", function(){
+            document.body.style.backgroundColor="white"
+       })
+    </script>
+</body>
+</html>

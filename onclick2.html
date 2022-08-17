@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getGreen()"> click me:green</button>
+    <button id="orange">click me:orange</button>
+    <button id="gray">click me:gray</button>
+    <button id="pink">pink button</button>
+    <script>
+        function getGreen(){
+            document.body.style.backgroundColor = "green";
+        }
+        const orangeButton = document.getElementById("orange");
+        orangeButton.onclick= getOrange;
+        function getOrange(){
+            document.body.style.backgroundColor="orange";
+        }
+        document.getElementById("gray").addEventListener("click",function(){
+            document.body.style.backgroundColor="gray";
+        })
+       var pinkButton = document.getElementById("pink");
+       pinkButton.onclick = function getPink(){
+            document.body.style.backgroundColor = "pink";
+       };
+
+       
+    </script>
+</body>
+</html>

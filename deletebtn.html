@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h3 id="text">this is importandt think</h3>
+        <input type="text" name="" id="textField">
+        <button id="delete-btn" disabled>delete</button>
+    </section>
+    <script>
+        document.getElementById("delete-btn").addEventListener("click", function(){
+            document.getElementById("text").style.display = "none";
+        })
+        document.getElementById("textField").addEventListener("focus", function(){
+            // console.log("focused")
+            document.body.style.backgroundColor="gray"
+        });
+        document.getElementById("textField").addEventListener("blur",function(){
+            document.body.style.backgroundColor = "white";
+        })
+        // document.getElementById("textField").addEventListener("keydown",function(){
+        //     console.log("keydown hoice")
+        // })
+        // document.getElementById("textField").addEventListener("keydown",function(){
+        //     console.log("keydown hoice")
+        // })
+        // document.getElementById("textField").addEventListener("keydown",function(){
+        //     const myTextBox  = document.getElementById("textField");
+        //    console.log(myTextBox.value);
+        // })
+        // document.getElementById("textField").addEventListener("keypress",function(){
+        //     const myTextBox  = document.getElementById("textField");
+        //    console.log(myTextBox.value);
+        // })
+        // document.getElementById("textField").addEventListener("keyup",function(){
+        //     const myTextBox  = document.getElementById("textField");
+        //    console.log(myTextBox.value);
+        // })
+        document.getElementById("textField").addEventListener("keyup",function(event){
+            
+        //    if(event.target.value == "delete"){
+        //         document.getElementById("delete-btn").removeAttribute("disabled")
+        //    }
+        //    else{
+        //         document.getElementById("delete-btn").setAttribute("disabled",true)
+        //    }
+
+        console.log(event);
+        // console.log(event);
+        })
+
+        document.getElementById("textField").addEventListener("change",function(){
+            const myTextBox  = document.getElementById("textField");
+            console.log(myTextBox.value);
+        })
+
+       
+    </script>
+</body>
+</html>

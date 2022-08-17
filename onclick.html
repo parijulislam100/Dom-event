@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="console.log('this is clicked')"> Dom Event</h1>
+    <button onclick="alert(7)">click me</button>
+
+    <button onclick="document.body.style.backgroundColor='yellow' ">yellow</button>
+    <button onclick="makeRed()">red</button>
+    <button id="orange">orange</button>
+    <button id ="gray">gray button </button>
+    <button id="green">green</button>
+    <button id="goldenrod">golden</button>
+    <button id="hotPink">Hot Pink</button>
+    <button id="khaki">khaki</button>
+    <button id="againGreen"> again green</button>
+    <button id="againRed"> again red</button>
+    <button id="againOrange">againOrange</button>
+
+    <script>
+        function makeRed(){
+            document.body.style.backgroundColor="red";
+        }
+        var orangeButton = document.getElementById('orange');
+        orangeButton.onclick = makeOrange;
+        function makeOrange(){
+            document.body.style.backgroundColor = 'orange';
+        }
+        
+        var grayButton = document.getElementById('gray');
+        // console.log(grayButton);
+        grayButton.onclick = function (){
+            document.body.style.backgroundColor = 'gray';
+        }
+
+        var greenButton = document.getElementById('green');
+        greenButton.onclick=function(){
+            document.body.style.backgroundColor='green';
+        }
+
+        var goldenButton = document.getElementById("goldenrod");
+        goldenButton.addEventListener("click",myGoldenrodButton);
+
+        function myGoldenrodButton(){
+            document.body.style.backgroundColor="goldenrod";
+        }
+
+        const hotpinkButton = document.getElementById("hotPink");
+        // console.log(hotpinkButton);
+        hotpinkButton.addEventListener("click", function(){
+            document.body.style.backgroundColor="hotpink";
+        })
+        document.getElementById("khaki").addEventListener("click",function(){
+            document.body.style.backgroundColor="khaki";
+        })
+
+        // again use green color;
+
+        document.getElementById('againGreen').addEventListener('click',function(){
+            document.body.style.backgroundColor = 'green';
+        })
+        
+        var againRedButton = document.getElementById("againRed");
+        againRedButton.addEventListener("click",function(){
+            document.body.style.backgroundColor = "red";
+        })
+        
+        const againOrangeButton = document.getElementById("againOrange");
+        againOrangeButton.addEventListener("click", makeOrangeButton);
+        function makeOrangeButton(){
+            document.body.style.backgroundColor = "orange";
+        }
+        
+    </script>
+</body>
+</html>
